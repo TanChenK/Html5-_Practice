@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+ function allowdrag(ev)
+{
+ev.preventDefault();
+}
+
+function drap(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<style type="text/css">
+#div1 {width:488px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<img id="img1" src="9d82d158ccbf6c812f9fe0e1be3eb13533fa400b.jpg" width="200px" height="50px" draggable="true" ondragstart="drap(event)" >
+<div id="div1" ondragover="allowdrag(event)" ondrop="drop(event)"></div> 
+</body>
+</html>
