@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="my.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="div1">       <!--最大的div，里面有两个div-->
+  <div class="div2">
+    <div class="div4">   <!--div4 记录标题-->
+      <p class="p1" id="p1">基本资料</p>
+    </div>
+    <div class="basis">                <!--基础资料-->
+      <pre id="pre1">
+        张三
+        年龄：18
+        性别：男
+        电话：15252525250
+        qq号：33445566&nbsp;&nbsp;<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=609091374&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:33445566:52" alt="点击这里给我发消息" title="点击这里给我发消息" height="15"/></a>	
+      </pre>
+    </div> 
+    <div class="div5">   <!--相片框-->
+      <img src="9d82d158ccbf6c812f9fe0e1be3eb13533fa400b.jpg" class="img1"/>
+    </div>
+  </div>
+  <div class="div3">     <!--div3 导航-->
+    <span class="span1" onclick="getEducation()">
+      <div class="div6">
+        教育背景
+        Education
+        background
+      </div>
+    </span>
+    <span class="span1" onclick="getAbility()">
+      <div class="div6">
+        个人能力
+        Personnal
+        abilit
+      </div>
+    </span>
+    <span class="span1" onclick="getPro()">
+      <div class="div6">
+        专业基础
+        Professional
+        foundation
+      </div>
+    </span>
+    <span class="span1" onclick="getSelf()">
+      <div class="div6">
+        自我鉴定
+        Self
+        identification
+      </div>
+    </span>
+    <span class="span1" onclick="getWork()">
+      <div class="div6">
+        作品欣赏
+        Works
+        appreciation
+      </div>
+    </span>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+  function getEducation(){
+	  var pNode = document.getElementById("p1");
+	  pNode.innerHTML="教育背景"; 
+	  var preNode = document.getElementById("pre1");
+	  preNode.innerHTML ="<center><br><br>肄业于湖南科技大学</center>"; 
+  }
+   function getAbility(){
+	  var pNode = document.getElementById("p1");
+	  pNode.innerHTML ="个人能力"; 
+	  var preNode = document.getElementById("pre1");
+	  preNode.innerHTML ="<center><br><br>Html,Css,Javascript</center>"; 
+  }
+  function getPro(){
+	  var pNode = document.getElementById("p1");
+	  pNode.innerHTML ="专业基础"; 
+	  var preNode = document.getElementById("pre1");
+	  preNode.innerHTML ="<center><br><br>计算机科学与技术</center>"; 
+  }
+  function getSelf(){
+	  var pNode = document.getElementById("p1");
+	  pNode.innerHTML ="自我鉴定"; 
+	  var preNode = document.getElementById("pre1");
+	  preNode.innerHTML ="<center><br><br>xxxxx</center>"; 
+  }
+  function getWork(){
+	  var pNode = document.getElementById("p1");
+	  pNode.innerHTML ="作品欣赏"; 
+	  var preNode = document.getElementById("pre1");
+	  preNode.innerHTML ="<center><br><br>xxxxxx</center>"; 
+  }
+</script>
+</html>
