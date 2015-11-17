@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+  function getXy(ev){
+	  var x=ev.clientX;
+	  var y=ev.clientY;
+	  document.getElementById("div2").innerHTML = "("+x+","+y+")";
+  }
+  function setXy(ev){
+	  document.getElementById("div2").innerHTML = "";
+  }
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<p>请把鼠标放入改矩形区域</p>
+<div id="div1" style="heightfloat:left;width:199px;height:99px;border:1px solid #c3c3c3" onmousemove="getXy(event)" onmouseout="setXy()"></div>
+<div id="div2"></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<body>
+<canvas id="draw" width="300px" height="300px" style="border:1px solid black;"></canvas>
+</body>
+<script type="text/javascript">
+  var c = document.getElementById("draw");
+  var cxt = c.getContext("2d");
+   cxt.shadowColor="black"
+  cxt.shadowBlur="30";
+  cxt.shadowOffsetX="20";
+  cxt.beginPath();
+  cxt.moveTo(20,20);
+  cxt.lineTo(100,55);
+  cxt.lineTo(100,100);
+  cxt.closePath();
+  cxt.stroke();
+  cxt.fillStyle="red";
+  cxt.beginPath();
+  cxt.arc(200,50,20,0,Math.PI*2,true);
+  cxt.fill();
+  var grd = cxt.createLinearGradient(50,200,200,200);
+  grd.addColorStop(0.1,"red");
+  grd.addColorStop(0.3,"orange");
+  grd.addColorStop(0.5,"yellow");
+  grd.addColorStop(0.6,"green");
+  grd.addColorStop(0.7,"blue");
+  grd.addColorStop(0.8,"indigo");
+  grd.addColorStop(1,"violet");
+  cxt.fillStyle = grd;
+  cxt.fillRect(50,200,200,200);
+  var img = new Image();
+  img.src = "9d82d158ccbf6c812f9fe0e1be3eb13533fa400b.jpg";
+  cxt.drawImage(img,0,0,20,20);
+  var grd1 = cxt.createRadialGradient(150,200,5,150,200,100);
+  grd1.addColorStop(0,"red");
+  grd1.addColorStop(1,"yellow");
+  cxt.fillStyle = grd1;
+  cxt.fillRect(100,100,150,100);
+  cxt.beginPath();
+  cxt.lineWidth="10";
+  cxt.lineCap="round";
+  cxt.lineJoin="round";
+  cxt.moveTo(20,100);
+  cxt.lineTo(100,100);
+  cxt.lineTo(150,120);
+  cxt.stroke();
+</script>
+</html>
