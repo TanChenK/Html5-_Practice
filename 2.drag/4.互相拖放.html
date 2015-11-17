@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <style type="text/css">
+    #div1, #div2
+      {float:left; width:100px; height:35px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+  </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+<img src="9d82d158ccbf6c812f9fe0e1be3eb13533fa400b.jpg" style="width:70px;height:20px;" draggable="true" ondragstart="drag(event)" id="drag1" />
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</body>
+<script type = "text/javascript">
+      function drag(ev){
+		  ev.dataTransfer.setData("Text",ev.target.id);
+	  }
+	  function allowDrop(ev){
+		  ev.preventDefault();
+	  }
+	  function drop(ev){
+		  ev.preventDefault();
+		  var data = ev.dataTransfer.getData("Text");
+		  ev.target.appendChild(document.getElementById(data));
+	  }
+</script>
+</html>
